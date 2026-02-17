@@ -14,20 +14,42 @@ export const PRICING_IN_PERSON_COPY = {
 } satisfies PricingInPersonCopy;
 
 export const IN_PERSON_PLANS: readonly InPersonPlan[] = [
-   {
+  {
     id: "monthly",
     name: "Plano Mensal",
     description: "Melhor custo-benefício pagando o mês fechado.",
     featured: true,
     billingType: "monthly",
     ratePerClass: 45,
-    options: [
-      // 2x sem desconto no mensal (como você disse)
-      { label: "2x/sem (8 aulas)", classesPerMonth: 8, totalLabel: "sem desconto", disabled: true },
 
-      { label: "3x/sem (12 aulas)", classesPerMonth: 12, totalLabel: "R$540/mês", totalValue: 540 },
-      { label: "4x/sem (16 aulas)", classesPerMonth: 16, totalLabel: "R$720/mês", totalValue: 720 },
-      { label: "5x/sem (20 aulas)", classesPerMonth: 20, totalLabel: "R$900/mês", totalValue: 900 },
+    promo:
+      "🎁 Indique um amigo no plano mensal e ganhe 1 semana de aulas grátis.", 
+
+    options: [
+      {
+        label: "2x/sem (8 aulas)",
+        classesPerMonth: 8,
+        fullValue: 360,
+        disabled: true, // sem desconto
+      },
+      {
+        label: "3x/sem (12 aulas)",
+        classesPerMonth: 12,
+        fullValue: 600,
+        discountedValue: 540,
+      },
+      {
+        label: "4x/sem (16 aulas)",
+        classesPerMonth: 16,
+        fullValue: 800,
+        discountedValue: 720,
+      },
+      {
+        label: "5x/sem (20 aulas)",
+        classesPerMonth: 20,
+        fullValue: 1000,
+        discountedValue: 900,
+      },
     ],
   },
   {
@@ -37,11 +59,10 @@ export const IN_PERSON_PLANS: readonly InPersonPlan[] = [
     billingType: "weekly",
     ratePerClass: 50,
     options: [
-      { label: "2x/sem (8 aulas)", classesPerMonth: 8, totalLabel: "R$400/mês", totalValue: 400 },
-      { label: "3x/sem (12 aulas)", classesPerMonth: 12, totalLabel: "R$600/mês", totalValue: 600 },
-      { label: "4x/sem (16 aulas)", classesPerMonth: 16, totalLabel: "R$800/mês", totalValue: 800 },
-      { label: "5x/sem (20 aulas)", classesPerMonth: 20, totalLabel: "R$1.000/mês", totalValue: 1000 },
+      { label: "2x/sem (8 aulas)", classesPerMonth: 8, fullValue: 400 },
+      { label: "3x/sem (12 aulas)", classesPerMonth: 12, fullValue: 600 },
+      { label: "4x/sem (16 aulas)", classesPerMonth: 16, fullValue: 800 },
+      { label: "5x/sem (20 aulas)", classesPerMonth: 20, fullValue: 1000 },
     ],
   },
- 
 ];

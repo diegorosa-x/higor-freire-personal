@@ -13,11 +13,11 @@ export type Props = {
 export type BillingType = "weekly" | "monthly";
 
 export type BillingOption = {
-  label: string;        // "2x/sem (8 aulas)"
-  classesPerMonth: number; // 8, 12, 16, 20
-  totalLabel: string;   // "R$400/mês" ou "sem desconto"
-  totalValue?: number;  // opcional (se quiser usar depois)
-  disabled?: boolean;   // opcional (para "sem desconto")
+  label: string;
+  classesPerMonth: number;
+  fullValue: number; // valor sem desconto
+  discountedValue?: number; // valor com desconto (opcional)
+  disabled?: boolean; // opcional (para "sem desconto")
 };
 
 export type InPersonPlan = {
@@ -30,6 +30,8 @@ export type InPersonPlan = {
   ratePerClass: number; // 50 ou 45
 
   options: readonly BillingOption[];
+
+  promo?: string;
 };
 
 export type PricingInPersonCopy = {

@@ -52,6 +52,7 @@ const PricingOnline: React.FC = () => {
         >
           <div className="grid lg:grid-cols-2">
             {/* Content */}
+
             <motion.div
               className="p-12 md:p-20"
               initial={reduceMotion ? false : "hidden"}
@@ -65,7 +66,9 @@ const PricingOnline: React.FC = () => {
                 variants={fadeUp}
               >
                 {pricingOnline.titlePrefix}{" "}
-                <span className="text-accent">{pricingOnline.titleHighlight}</span>
+                <span className="text-accent">
+                  {pricingOnline.titleHighlight}
+                </span>
               </motion.h2>
 
               <motion.p
@@ -74,6 +77,17 @@ const PricingOnline: React.FC = () => {
               >
                 {pricingOnline.description}
               </motion.p>
+
+              <motion.div className="bg-gradient-to-r from-emerald-500/10 to-emerald-400/5 p-4 rounded-xl mb-10">
+                <motion.p className="text-emerald-400 font-semibold">
+                  🎁 Promoção por Indicação
+                </motion.p>
+                <motion.p className="text-slate-300 mt-2">
+                  Indique um amigo que feche qualquer plano e pague apenas
+                  <span className="text-emerald-400 font-bold"> R$120 </span>
+                  pelos 2 meses completos de acompanhamento.
+                </motion.p>
+              </motion.div>
 
               <motion.div variants={fadeUp}>
                 <FeatureList features={ONLINE_FEATURES} />
@@ -114,7 +128,9 @@ const PricingOnline: React.FC = () => {
               initial={reduceMotion ? false : { opacity: 0 }}
               whileInView={reduceMotion ? undefined : { opacity: 1 }}
               viewport={{ once: true, amount: 0.25 }}
-              transition={reduceMotion ? undefined : { duration: 0.6, ease: "easeOut" }}
+              transition={
+                reduceMotion ? undefined : { duration: 0.6, ease: "easeOut" }
+              }
             >
               <motion.img
                 src={pricingOnline.image.src}
@@ -152,7 +168,11 @@ const PricingOnline: React.FC = () => {
                 initial={reduceMotion ? false : { opacity: 0, y: 10 }}
                 whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={reduceMotion ? undefined : { duration: 0.5, ease: "easeOut", delay: 0.1 }}
+                transition={
+                  reduceMotion
+                    ? undefined
+                    : { duration: 0.5, ease: "easeOut", delay: 0.1 }
+                }
                 // flutuação discreta (transform only)
                 animate={reduceMotion ? undefined : { y: [0, -6, 0] }}
                 // separa o timing do animate, pra não conflitar
