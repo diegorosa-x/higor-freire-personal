@@ -8,7 +8,7 @@ export const ABOUT_COPY = {
     src: "/assets/img/foto-perfil.jpeg",
     alt: "Higor Freire Personal Trainer",
   },
-  cref: { label: "Registro Profissional", value: "CREF 000000-G/SP" },
+  cref: { label: "Registro Profissional", value: "CREF 212305-G/SP" },
   paragraphs: [
     "Minha missão é guiar você em uma jornada de resultados reais. Não é apenas sobre treinar, é sobre transformar seu estilo de vida e conquistar a melhor versão do seu corpo.",
     "Com foco em emagrecimento, ganho de massa e qualidade de vida, desenvolvo metodologias que unem ciência e prática para acelerar sua evolução de forma segura e sustentável.",

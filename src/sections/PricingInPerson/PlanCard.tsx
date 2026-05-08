@@ -136,23 +136,8 @@ export const PlanCard: React.FC<Props> = ({
                       : "text-slate-900 dark:text-white"
                   }`}
                 >
-                  {opt.disabled ? (
-                    <span>Sem desconto</span>
-                  ) : opt.discountedValue ? (
-                    <span className="flex items-center gap-2">
-                      <span className="line-through text-xs text-slate-400">
-                        {`R$${opt.fullValue.toLocaleString("pt-BR")}/mês`}
-                      </span>
-
-                      <span>
-                        {`R$${opt.discountedValue.toLocaleString("pt-BR")}/mês`}
-                      </span>
-                    </span>
-                  ) : (
-                    <span>
-                      {`R$${opt.fullValue.toLocaleString("pt-BR")}/mês`}
-                    </span>
-                  )}
+                 
+                 
                 </span>
               </li>
             ))}

@@ -33,10 +33,9 @@ export const IN_PERSON_PLANS: readonly InPersonPlan[] = [
         disabled: true, // sem desconto
       },
       {
-        label: "3x/sem (12 aulas)",
-        classesPerMonth: 12,
+        label: "3x/sem (13 aulas)",
+        classesPerMonth: 13,
         fullValue: 600,
-        discountedValue: 540,
       },
       {
         label: "4x/sem (16 aulas)",
